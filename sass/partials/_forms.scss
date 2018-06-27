@@ -1,0 +1,60 @@
+/* Forms
+---------------------------------------- */
+
+input,
+select,
+textarea {
+	font-size: rem(16px);
+	padding: rem(20px);
+	background-color: $white;
+	color: #777;
+	border-radius: 0;
+	border: 0;
+	font-weight: 300;
+	font-family: $font-stack-2;
+	-moz-appearance: none;
+	&:focus {
+		border: 0 !important;
+	}
+}
+
+button, select {
+    text-transform: none;
+    font-weight: 300;
+    font-family: $font-stack-2;
+}
+
+input[type='submit'] {
+	cursor: pointer;
+	font-weight: 300;
+	font-family: $font-stack-2;
+	padding: rem(21px);
+	&:hover {
+		opacity: .8;
+	}
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #999;
+	outline: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+::-moz-placeholder {
+	color: #999;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #999;
+}

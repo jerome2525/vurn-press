@@ -1,0 +1,38 @@
+/*
+	Theme Name: Vurn Press
+	Description: A theme designed for Real Estate Business (Beta Version)
+	Author: Jerome Anyayahan
+	Author URI: http://wp-needs.com
+	Version: 0.0.1
+	License: GPL-2.0+  
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+
+	Template: genesis
+*/
+
+// Compass
+@import "compass/css3";
+@import "compass/reset";
+@import "susy";
+@import "breakpoint";
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/rem";
+@import "partials/base";
+@import "partials/layout";
+
+@import "partials/header";
+@import "partials/nav";
+@import "partials/content";
+@import "partials/sidebar";
+@import "partials/widgets";
+@import "partials/footer";
+@import "partials/comments";
+@import "partials/forms";
+@import "partials/tables";
+
+@import "partials/misc";
+@import "partials/section";
+
+

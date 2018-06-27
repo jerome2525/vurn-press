@@ -1,0 +1,163 @@
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+.home .site-header {
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+}
+
+.site-header .wrap {
+  background-color: $black;
+  .widget {
+    padding: 0;
+  }
+}
+
+
+/* ## Title Area
+--------------------------------------------- */
+
+.header-full-width .title-area {
+  width: 100%;
+}
+
+.site-title {
+  font-size: rem(34px);
+  line-height: 1.2;
+  font-family: $font-stack-1;
+  font-weight: 700;
+  a {
+    font-family: $font-stack-1;
+    color: $white;
+  }
+}
+
+.site-title a,
+.site-title a:hover,
+.site-title a:focus {
+  color: $white;
+}
+
+.header-image .site-title > a {
+  background-size: 105px 84px;
+  float: left;
+  min-height: rem(84px);
+  width: 100%;
+}
+
+.site-description {
+  font-size: rem(16px);
+  font-weight: 300;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.site-description,
+.site-title {
+  margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+  display: block;
+  text-indent: -9999px;
+}
+
+/* ## Layout
+--------------------------------------------- */
+.site-header {
+  .title-area{
+    background-color: #313841;
+    padding: rem(20px 40px);
+    max-width: 325px;
+    text-align: center;
+    transition-duration: .5s;
+    @include span(4 of 12);
+    @include breakpoint($tablet) {
+      @include full;
+      text-align: center;
+      max-width: 100%;
+    }
+    @include breakpoint($mobile) {
+      @include full;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+  .widget-area {
+    @include span( last 8 );
+    text-align: right;
+    @include breakpoint($tablet) {
+      @include full;
+    }
+    @include breakpoint($mobile) {
+      @include full;
+    }
+  }
+
+  @include breakpoint($mobile) {
+    .title-area, 
+    .widget-area {
+      @include full;
+    }
+  }
+}
+
+.wp-custom-logo {
+
+  .title-area {
+    max-width: none;
+    margin-top: 0;
+    @include breakpoint($mobile) {
+      text-align: center;
+    }
+  }
+
+  .site-title {
+    text-indent: 0;
+  }
+
+  .site-title > a {
+    min-height: 0;
+  }
+
+  .custom-logo-link {
+    display: block;
+  }
+
+  .custom-logo {
+    vertical-align: top;
+  }
+
+} 
+
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus {
+  background: #fff;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  clip: auto !important;
+  color: #333;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}

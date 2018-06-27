@@ -1,0 +1,178 @@
+.hero {
+  background-image: url('img/key.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .wrap {
+    padding: rem(182px 0 100px 0);
+    .headline {
+      text-align: center;
+      font-size: rem(20px);
+      background-color: $white;
+      @include container(80%);
+      @include breakpoint($mobile) {
+        @include full;
+        max-width: 100%;
+      }
+      padding: rem(40px);
+      .widget-title {
+        color: $red;
+        font-size: rem(48px);
+        line-height: 1.1;
+      }
+
+      form {
+        background-color: $black;
+        padding: rem(30px 20px);
+        overflow: hidden;
+        .row-1 {
+          overflow: hidden;
+          margin-bottom: rem(15px);
+          @include breakpoint($mobile) {
+            margin-bottom: 0;
+          }
+          .input {
+            @include span(9);
+            @include breakpoint($mobile) {
+              @include full;
+              margin-bottom: 20px;
+            }
+          }
+          #types {
+            @include span(last 3);
+            @include breakpoint($mobile) {
+              @include full;
+              margin-bottom: 20px;
+            }
+          }
+        }
+
+        .row-2 {
+          overflow: hidden;
+          .input {
+            @include rowMachine(4, 1.7%);
+            @include breakpoint($mobile) {
+              @include full;
+              margin-bottom: 20px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        input[type="number"],
+        input[type="text"] {
+          padding: rem(21px);
+        }
+        .btn {
+          background-color: $red;
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.hero-listing {
+  .wrap {
+    padding: rem(80px 0);
+    .property-list {
+      @include rowMachine(3, 1.5%);
+      background-color: $white;
+      text-align: center;
+      margin-bottom: rem(20px);
+      position: relative;
+      overflow: hidden;
+      @include breakpoint($mobile) {
+        @include full;
+      }
+      .listing-text {
+        background-color: #d23836;
+        color: $white;
+        font-size: rem(9px);
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 0;
+        position: absolute;
+        right: rem(-40px);
+        text-align: center;
+        text-transform: uppercase;
+        top: rem(30px);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: rem(160px);
+        @include breakpoint($mobile) {
+          top: 15px;
+        }
+      }
+      .price {
+        background-color: $white;
+        border-bottom: 1px solid #e5e5e5;
+        display: inline-block;
+        font-family: $font-stack-1;
+        font-size: 24px;
+        margin: -30px auto 12px;
+        padding: 12px 32px;
+      }
+      h3 {
+        font-family: $font-stack-1;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .address {
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .more {
+        color: $red;
+        display: block;
+        &:hover {
+          opacity: .8;
+        }
+      }
+      .inner {
+        padding: rem(0 20px 48px 20px);
+      }
+    }
+  }
+  .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(img/loader.gif) 50% 50% no-repeat #f9f9f9;
+    opacity: .8;
+    display: none;
+  }
+
+  .paginate-bg {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    .page-numbers, 
+    .next {
+      font-size: rem(24px);
+      font-family: $font-stack-1;
+      font-style: italic;
+      font-weight: 300;
+      margin-right: rem(10px);
+      color: $red;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .current {
+      pointer-events: none;
+      color: $black;
+    }
+  }
+}
+
+

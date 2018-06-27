@@ -1,0 +1,103 @@
+.wrap {
+	@include container(1280px);
+	
+	@include breakpoint($tablet) {
+		width: container(95%);
+	}
+
+	@include breakpoint($mobile) {
+		width: container(95%);
+		max-width: 400px;
+	}
+}
+
+
+/* Grid Layouts
+---------------------------------------- */
+
+.content-sidebar {
+
+	.content {
+		@include span(8);
+		clear: both;
+		@extend %clearfix;
+	}
+
+	.sidebar {
+		@include span(last 4);
+	}
+
+	@include breakpoint($mobile) {
+		.content {@include full;}
+		.sidebar {@include full;}
+	}
+}
+
+.sidebar-content {
+
+	.content {
+		@include span(last 8);
+	}
+
+	.sidebar {
+		@include span(4);
+	}
+
+	@include breakpoint($mobile) {
+		.content {@include full;}
+		.sidebar {@include full;}
+	}
+}
+
+.full-width-content {
+	.content {
+		@include span (12 of 12);
+	}
+}
+
+.content-sidebar-sidebar {
+	.content {
+		@include span(6);
+	}
+
+	.sidebar-primary {
+		@include span(4);
+	}
+
+	.sidebar-secondary {
+		@include span(2 last)
+	}
+}
+
+.sidebar-sidebar-content {
+	.sidebar-secondary {
+		@include span(2)
+	}
+	.content-sidebar-wrap {
+		@include span(last 10);
+	}
+	.content {
+		@include span(last 8);
+	}
+
+	.sidebar-primary {
+		@include span(4);
+	}
+}
+
+.sidebar-content-sidebar {
+	.sidebar-secondary{
+		@include span(2);
+	}
+
+	.content-sidebar-wrap {
+		@include span(last 10);
+	}
+
+	.content {
+		@include span(8);
+	}
+	.sidebar-primary {
+		@include span( last 4);
+	}
+}

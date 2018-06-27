@@ -1,0 +1,160 @@
+/* Comments
+--------------------------------------------- */
+ol.comment-list {
+  padding: 0;
+}
+
+.comment-form {
+  > p {
+    margin: 0;
+  }
+}
+
+.form-allowed-tags {
+  background-color: $gray;
+}
+
+.entry-comments {
+  @include full;
+  padding: rem(100px 0);
+
+  h3 {
+    font-size: rem(16px);
+  }
+}
+
+.comment-respond {
+  @include full;
+}
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+  background-color: $offwhite;
+  margin-bottom: rem(40px);
+}
+
+.entry-comments img {
+  max-width: 100%;
+}
+
+.entry-comments-link::before {
+  content: "\2014";
+  margin: rem(0 6px 0 2px);
+}
+
+.comment-respond a,
+.entry-comments a {
+}
+
+.entry-comments .comment-author {
+  font-size: rem(16px);
+  margin-bottom: 0;
+  font-family: $font-stack-2;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+  width: 50%;
+}
+
+.comment-respond label {
+  display: block;
+  margin-right: 12px;
+}
+
+textarea#comment {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: none;
+  border-bottom: 1px solid #EBEBEB;
+  background-color: $offwhite;
+  resize: none;
+  height: auto;
+}
+
+a.comment-time-link {
+  color: #232323;
+  font-size: rem(14px);
+  opacity: .5;
+}
+
+.comment-list li,
+.ping-list li {
+  list-style-type: none;
+}
+
+.comment-list li li {
+  margin-top: 24px;
+  padding: rem(10px 0 10px 40px);
+}
+
+.comment-list li li {
+  margin-right: -32px;
+}
+
+.comment-content {
+  padding-left: rem(116px);
+  ol li {
+    list-style-type: decimal;
+  }
+  ul li {
+    list-style-type: disc;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.comment-reply {
+  font-size: rem(16px);
+  padding-left: rem(116px);
+  a {
+    color: $gold;
+    font-weight: 600;
+  }
+}
+
+li.comment {
+  border-right: none;
+}
+
+.comment .avatar {
+  @include border-radius(50%);
+  margin: 0 16px 24px 0;
+  float: left;
+}
+
+.entry-pings .reply {
+  display: none;
+}
+
+.bypostauthor {
+}
+
+.form-allowed-tags {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  padding: 24px;
+}
+
+.logged-in-as {
+  float: right;
+  font-size: rem(14px);
+  font-weight: 600;
+  font-family: freightSansMedium;
+  letter-spacing: 0.58px;
+
+  a {
+    color: $gold;
+  }
+}
+
+p.must-log-in {
+  text-align: center;
+  padding: rem(70px 0 0);
+}
