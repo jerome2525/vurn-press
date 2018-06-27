@@ -1,2 +1,2 @@
-# vsellis-theme
-Our starter theme
+# vurn-press theme
+Real Estate Genesis Child Theme Based on Agent Press
